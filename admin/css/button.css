@@ -1,0 +1,52 @@
+.button {
+    --color: #F6F8FF;
+    --background: #171827;
+    --background-hover: #0D0F18;
+    --shadow: #{rgba(#00093D, .12)};
+    --person: #F6F8FF;
+    --person-arm: var(--person);
+    --person-leg: #D1D6EE;
+    --weight: #275EFE;
+    --weight-disk: #5C86FF;
+    --person-y: 0;
+    --weight-y: 0;
+    --arm-rotate: 40;
+    --arm-rotate-s: -40;
+    --arm-rotate-s-x: 0;
+    --leg-y: -2;
+    --leg-rotate: 45;
+    --leg-rotate-s: -70;
+    display: table;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    line-height: 24px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    .inner {
+        padding: 14px 20px;
+        transition: transform .2s, background .4s;
+        color: var(--color);
+        position: relative;
+        display: flex;
+        z-index: 1;
+        min-width: 190px;
+        border-radius: 13px;
+        background: var(--b, var(--background));
+        box-shadow: 0 1px 3px var(--shadow), 0 3px 7px var(--shadow);
+        transform: scale(var(--scale, 1)) translateZ(0);
+        &:active {
+            --scale: .95;
+        }
+        &:hover {
+            --b: var(--background-hover);
+        }
+    }
+
+}
